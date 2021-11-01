@@ -4,23 +4,19 @@ Naive Bayes Machine Learning Model
 # Content
 
 1. About NB Model
-2. NB Mind Map image
+2. Naive Bayes Mind Map
 3. Fundamentals of probability
 4. NB working
-5. Distance measures
+5. NB Classifier on text data
 6. Limitations of NB
 7. Failure of NB
-8. NB techniques to reduce space & time complexity
-9. Decision surface for NB
-10. KNN when Overfit & underfit
-11. Can NB do Multiclass classification ?
-12. Can NB do Probabilitics predictions ?
-13. NB when dataset is imbalanced
-14. NB when dataset has outliers
-16. Is NB affected by scale of the features ?
-17. Are NB interpetable ?
-18. Acknowledgements
-19. License
+8. Numerical Stability
+9. Bais-Variance trade off for Naive Bayes
+10. Feature Importance
+11. Interpretability
+12. Imbalanced data
+13. Acknowledgements
+14. License
 
 # About NB Model
 
@@ -60,7 +56,7 @@ Naive Bayes Machine Learning Model
 - Therefore, value 1 or 0 doesn't make sense!!
 - We need to have a better scheme to handle i,e Laplace Smoothing / Additive Smoothing
 
-## Laplace Smoothing / Additive Smoothing
+### Laplace Smoothing / Additive Smoothing
 
 - https://en.wikipedia.org/wiki/Additive_smoothing
 - alpha is the hyperparameter. When alpha is large, approximatly 1/2 (half) value will be assigned to the likelyhood.
@@ -122,6 +118,66 @@ Therefore Bias & Variance trade off depends on alpha value
 
 - Upsampling
 - Downsampling
+
+# Outliers in NB
+
+- Find the words that fewer occurs in training data for outlier
+- When outlier is present in testing time, laplace smoothing will take care of it
+
+## Solution ?
+
+- Ignore rare words
+- Use laplace smoothing
+
+# Missing values in NB ?
+
+- text data: there is no case of missing data in case of text data
+- categorical feature: consider "NAN" as a category
+- Numerical feature: impute mean, median, etc
+
+# Can NB do multi-class classification ?
+
+- NB supports multi-class classification.
+- compares against all the probabilities and returns the maximum probability
+
+# Can NB handle large dimentional data ?
+
+- NB does text classification i,e high dimentional capability
+- So NB is able to handle large dim data
+
+Note: Make sure to use log probabilities in order to avoid nmerical overflow or stability underflow issue
+
+# Best & worst case of NB
+
+### Conditional independence of features
+
+- True: NB performs well
+- False: NB performance degrades
+
+### Some features are dependent
+
+- NB works fairly well
+
+### Text classification
+
+- email/review classification: high dimentional data
+- NB works well &
+- NB is the baseline/benchmark model
+
+### Often used when categorical features
+
+### Real value features
+
+- seldom or not used much
+
+### NB is interpretable & provides feature importance
+
+### Run time/ train time/ space are low
+
+- because store only prior and likelihood probabilities
+- NB is all about counting
+
+### Easily overfit if laplace smoothing is not done
 
 # Acknowledgements
 
