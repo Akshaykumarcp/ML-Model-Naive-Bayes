@@ -17,9 +17,10 @@
 15. Can NB do multi-class classification ?
 16. Can NB handle large dimentional data ?
 17. Best & worst case of NB 
-18. Acknowledgements
-19. License
-20. Connect with me
+18. Advantages
+19. Disadvantages
+20. Acknowledgements
+21. Connect with me
 
 ---
 
@@ -57,7 +58,7 @@ Where A and B are events and P(B)≠0
 - P(B|A) is also a conditional probability: the likelihood of event B occurring given that A is true.
 - P(A) and P(B) are the probabilities of observing A and B respectively; they are known as the marginal probability.
 
-Let’s understand it with the help of an example:
+#### Let’s understand it with the help of an example:
 
 The problem statement:
 
@@ -221,15 +222,26 @@ Therefore Bias & Variance trade off depends on alpha value
 
 ### 17.8 Easily overfit if laplace smoothing is not done
 
-## 18. Acknowledgements :handshake:
+## 18. Advantages:
 
- - [Google Images](https://www.google.co.in/imghp?hl=en-GB&tab=ri&authuser=0&ogbl)
+- Naive Bayes is extremely fast for both training and prediction as they not have to learn to create separate classes.
+- Naive Bayes provides a direct probabilistic prediction.
+- Naive Bayes is often easy to interpret.
+- Naive Bayes has fewer (if any) parameters to tune
+
+## 19. Disadvantages:
+
+- The algorithm assumes that the features are independent which is not always the scenario
+- Zero Frequency i.e. if the category of any categorical variable is not seen in training data set even once then model assigns a zero probability to that category and then a prediction cannot be made.
+
+## 20. Acknowledgements :handshake:
+
+- [Google Images](https://www.google.co.in/imghp?hl=en-GB&tab=ri&authuser=0&ogbl)
+- [Appliedai](https://www.appliedaicourse.com/)
+- [Ineuron](https://ineuron.ai/)
+- Other google sites
   
-## 19. License :page_facing_up:
-
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
-
-## 20. Connect with me :smiley:
+## 21. Connect with me :smiley:
 [<img align="left" alt="" width="22px" src="https://simpleicons.org/icons/linkedin.svg" />](https://www.linkedin.com/in/akshay-kumar-c-p/)
 [<img align="left" alt="" width="22px" src="https://simpleicons.org/icons/youtube.svg" />](https://www.youtube.com/channel/UC3l8RTE3zBRzUrHbSXpx-qA)
 [<img align="left" alt="" width="22px" src="https://simpleicons.org/icons/github.svg" />](https://github.com/Akshaykumarcp)
